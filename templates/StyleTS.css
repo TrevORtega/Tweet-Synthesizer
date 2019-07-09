@@ -1,0 +1,127 @@
+﻿body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E9EAED;
+}
+
+#wrapper {
+    width: 80%;
+    height: 20em;
+    display: block;
+    background-color: #c0deed;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.logo {
+    float: left;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    color: white;
+    font-size: 22px;
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+
+/* Navbar container */
+nav {
+    overflow: hidden;
+    background-color: #0084b4;
+    font-family: Arial;
+    display: block;
+}
+
+/* Links inside the navbar */
+nav a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* The dropdown container */
+.about {
+    float:right;
+    overflow: hidden;
+    padding-right: 20px;
+}
+
+/* Dropdown button */
+.about .dropbtn {
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 16px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 4px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.about:hover .dropdown-content {
+    display: block;
+}
+
+h1{
+    color: #00aced;
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 0;
+}
+h3{
+    margin-top: 0;
+    text-align: center;
+    /*border:1px solid black;*/
+}
+h1, h3{
+    width:80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+form {
+    display: block;
+    width: 60%;
+    margin: 0 10% 0 10%;
+}
+form input {
+    width: 90%;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 2em;
+    color: #1dcaff;
+    border: 3px solid #1dcaff;
+    border-radius: 10px;
+}
+#wrapper form input{
+    margin-top: 4em;
+}
