@@ -5,8 +5,11 @@
 <head>
     <meta charset="utf-8" />
     <title>Tweet Synthesizer</title>
-	
     
+	<!-- Favicon -->
+    <link rel="icon" href="{% static 'markov/images/apple-touch-icon.png' %}" type="image/gif" sizes="16x16">
+    
+    <!-- CSS Styling -->
    <link rel="stylesheet" type="text/css" href="{% static 'markov/css/StyleTS.css' %}" />
 </head>
 <body>
@@ -35,11 +38,13 @@
     <div id="wrapper">
         <form method="POST">
             {% csrf_token %}
+            <!-- Routes to forms.py -->
             {{ form }}
-            <!--<input type="text" id="name" name="name" placeholder="Twitter Handle: '@__'" />-->
-            <!--<input type="number" id="pages" name="pages" placeholder="(Optional) Amount of Pages to Read: ..." min="1" max="25"/>-->
 			<input id="enter" type="submit" value="Enter">
         </form>
+        <p>
+            Try: @Dril, @RealDonaldTrump, or @BillRatchet
+        </p>
     </div>
     <!--End Wrapper-->
     <footer>

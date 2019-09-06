@@ -17,6 +17,10 @@ body {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
+#wrapper p {
+    text-align: center;
+}
+
 .logo {
     float: left;
     font-family: Brush Script MT, Brush Script Std, cursive;
@@ -108,8 +112,6 @@ h1 {
 h3 {
     margin-top: 0;
     text-align: center;
-    background-color: c0deed;
-    /*border:1px solid black;*/
 }
 
 h1, h3 {
@@ -145,7 +147,7 @@ form {
     display: block;
     width: 60%;
     margin: 0 10% 0 10%;
-    padding-top: 4em;
+    padding-top: 7em;
 }
 
 form input {
