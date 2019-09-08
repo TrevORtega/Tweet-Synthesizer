@@ -1,0 +1,3 @@
+[submodule "markov/markov/twitter-scraper"]
+	path = markov/markov/twitter-scraper
+	url = https://github.com/bisguzar/twitter-scraper

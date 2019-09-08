@@ -4,7 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 
 from .forms import HandleForm
 
-from markov.scraper.markovey import *
+from markov.scraper2.markovey import *
 
 
 def index(request):

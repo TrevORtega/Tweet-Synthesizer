@@ -14,11 +14,13 @@ def main(user):
     try:
         # Fetching tweets 
         tweets = '\n'.join([t['text'] for t in get_tweets(user, pages=numPages)])
+        print(tweets)
         
         # Creating a sentence
         text_model = markovify.Text(tweets)
+        print('model: \n', text_model)
         newTweet = text_model.make_short_sentence(280)
-        
+        print('new: \n', newTweet)
         # Ensuring valid urls by making sure putting spaces before twitter images
         newTweet = separate_pic_url(newTweet)
         
