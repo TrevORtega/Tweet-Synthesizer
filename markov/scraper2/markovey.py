@@ -1,13 +1,14 @@
 import markovify
-from markov.scraper.twitter_scraper import get_tweets
+from twitter_scraper import get_tweets
+
 
 def main(user):
     
     # delete '@' from username
-    if(user[0] == '@'):
+    if user[0] == '@':
         user = user.lstrip('@')
     
-    # max number of pages
+    # max number of twitter pages to scrape
     numPages = 25
     
     # Error handling for invalid usernames
@@ -20,7 +21,7 @@ def main(user):
         text_model = markovify.Text(tweets)
         print('model: \n', text_model)
         newTweet = text_model.make_short_sentence(280)
-        print('new: \n', newTweet)
+
         # Ensuring valid urls by making sure putting spaces before twitter images
         newTweet = separate_pic_url(newTweet)
         
