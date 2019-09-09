@@ -1,5 +1,5 @@
 import markovify
-from markov.scraper.twitter_scraper import get_tweets
+from markov.scraper2.twitter_scraper import get_tweets
 
 def main(user):
     
