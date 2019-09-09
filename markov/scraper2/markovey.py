@@ -1,6 +1,10 @@
 import markovify
+<<<<<<< HEAD
 from twitter_scraper import get_tweets
 
+=======
+from markov.scraper2.twitter_scraper import get_tweets
+>>>>>>> 50699afdbed53c86e29189cad1272ac81d3c4bfb
 
 def main(user):
     
