@@ -9,6 +9,7 @@ verify_ssl = true
 twitter-scraper = "*"
 django-heroku = "*"
 gunicorn = "*"
+django = "*"
 
 [requires]
 python_version = "3.7"
