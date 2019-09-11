@@ -1,4 +1,4 @@
-from . import markovify
+import markovify
 
 from twitter_scraper import get_tweets
 
