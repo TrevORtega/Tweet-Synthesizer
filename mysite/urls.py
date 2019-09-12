@@ -19,6 +19,6 @@ from markov import views
 
 urlpatterns = [
 	#path('markov/', include('markov.urls')),
-    path('', views.index(), name='index'),
+    path('', views.index, name='index'),
     path('admin/', admin.site.urls),
 ]
