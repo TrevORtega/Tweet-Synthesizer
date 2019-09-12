@@ -10,6 +10,7 @@ twitter-scraper = "*"
 django-heroku = "*"
 gunicorn = "*"
 django = "*"
+markovify = "*"
 
 [requires]
 python_version = "3.7"
