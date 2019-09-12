@@ -1,5 +1,7 @@
 import markovify
 
+from . import twitter_scraper
+
 from twitter_scraper import get_tweets
 
 
