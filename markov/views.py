@@ -4,7 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 
 from .forms import HandleForm
 
-from markov.scraper2.markovey import *
+from .tasks import scrape_and_bake 
 
 
 def index(request):
@@ -20,8 +20,8 @@ def index(request):
             #get the twitter handle from user
             handle = form.cleaned_data['handle']
             
-            # Get the new tweet from the main function in markovey
-            tweet = main(handle)
+            # Use Celery to scrape and make tweet in the background
+            scrape_and_bake.delay(handle)
             
             # Redirect to the result page
             results_redirect(request)

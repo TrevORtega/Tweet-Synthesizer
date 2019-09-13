@@ -127,3 +127,8 @@ STATICFILES_DIRS = [
 # Configure Django App for Heroku
 import django_heroku
 django_heroku.settings(locals())
+
+CELERY_BROKER_URL = 'redis://h:pb66c0dfd1889b34625c281ac92fb2157fa5a6544b9e583a4c58c10e3adf9cd71@ec2-3-216-53-41.compute-1.amazonaws.com:19069'
+
+CELERY_ACCEPT_CONTENT = ['json']
+CLELERY_TASK_SERIALIZER = 'json'
