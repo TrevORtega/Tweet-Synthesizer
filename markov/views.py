@@ -24,7 +24,7 @@ def index(request):
             result = scrape_and_bake.delay(handle)
             
             # Get the tweet from the celery AsyncResult
-            tweet = result.collect()
+            tweet = result.get()
             
             # Redirect to the result page
             results_redirect(request)
