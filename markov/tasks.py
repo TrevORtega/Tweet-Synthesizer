@@ -8,7 +8,5 @@ from markov.scraper2.markovey import *
 def scrape_and_bake(user):
 
     # Get the new tweet from the main function in markovey
-    tweet = main(user)
-    
-    return 
+    return main(user)
     
