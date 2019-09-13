@@ -21,7 +21,10 @@ def index(request):
             handle = form.cleaned_data['handle']
             
             # Use Celery to scrape and make tweet in the background
-            tweet = scrape_and_bake.delay(handle)
+            result = scrape_and_bake.delay(handle)
+            
+            # Get the tweet from the celery AsyncResult
+            tweet = result.collect()
             
             # Redirect to the result page
             results_redirect(request)
