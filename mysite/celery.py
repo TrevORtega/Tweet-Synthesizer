@@ -1,11 +1,13 @@
 from __future__ import absolute_import, unicode_literals
 import os
 from celery import Celery
+from .settings import CELERY_BROKER_URL
 
 # set the default Django settings module for the 'celery' program.
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
 
-app = Celery('mysite')
+# TODO: Add backend / broker maybe
+app = Celery('mysite', backend=CELERY_BROKER_URL)
 
 # Using a string here means the worker doesn't have to serialize
 # the configuration object to child processes.
