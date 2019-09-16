@@ -19,5 +19,6 @@ from markov import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('loading/', views.loading_redirect),
     path('admin/', admin.site.urls),
 ]

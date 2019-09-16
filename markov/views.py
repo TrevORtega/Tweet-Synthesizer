@@ -29,7 +29,7 @@ def index(request):
             
             # TODO - redirect to loading page 
             loading_redirect(request)
-            render(request, 'loading.html')
+            
             
             # Get the tweet from the celery AsyncResult
             tweet = result.get()
