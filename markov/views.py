@@ -6,6 +6,8 @@ from .forms import HandleForm
 
 from .tasks import scrape_and_bake 
 
+import time
+
 
 def index(request):
     # Render the index page
@@ -23,6 +25,12 @@ def index(request):
             # Use Celery to scrape and make tweet in the background
             result = scrape_and_bake.delay(handle)
             
+            
+            
+            # TODO - redirect to loading page 
+            loading_redirect(request)
+            render(request, 'loading.html')
+            
             # Get the tweet from the celery AsyncResult
             tweet = result.get()
             
@@ -37,8 +45,10 @@ def index(request):
         
     return render(request, 'index.html', {'form': form})
     
+    
+def loading_redirect(request):
+    return redirect('loading/')
 
 def results_redirect(request):
-    
     return redirect('results/')
     

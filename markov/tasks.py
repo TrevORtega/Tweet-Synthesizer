@@ -12,4 +12,3 @@ def scrape_and_bake(user):
 
     # Get the new tweet from the main function in markovey
     return main(user)
-    

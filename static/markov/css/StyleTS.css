@@ -125,6 +125,13 @@ h1, h3 {
     width: 40%;
     margin: -2% 0 0 20%;
 }
+
+#resultsBox img{
+    display: block;
+    margin-left: auto;
+    margin-top: 30px;
+}
+
 #resultsBox p {
     background-color: white;
     border: 1px solid #1dcaff;
