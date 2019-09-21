@@ -6,11 +6,12 @@
     <meta charset="utf-8" />
     <title>Tweet Synthesizer</title>
 	
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'markov/images/apple-touch-icon.png' %}" type="image/gif" sizes="16x16">
+    
+    <!-- CSS Styling -->
    <link rel="stylesheet" type="text/css" href="{% static 'markov/css/StyleTS.css' %}" />
    <script>
-    function goBack(){
-        window.history.back()
-    }
     function refresh(){
         window.location.reload()
     }
@@ -51,14 +52,15 @@
             <button class="refresh" onclick="refresh()">
                 Try Again
             </button>
+            
             <a class="twitter-share-button"
                 href="https://twitter.com/intent/tweet?text={{newTweet}}">
                 Tweet
             </a>
-            
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            <button class="back" onclick="goBack()">
-                Go Back
+            
+            <button class="back">
+                <a href="https://tweet-synthesizer.herokuapp.com">Go Back</a>
             </button>
         </div>
     </div>

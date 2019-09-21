@@ -11,8 +11,6 @@ django-heroku = "*"
 gunicorn = "*"
 django = "*"
 markovify = "*"
-celery = "*"
-redis = "*"
 
 [requires]
 python_version = "3.7"
