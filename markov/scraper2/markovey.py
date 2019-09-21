@@ -1,8 +1,6 @@
 import markovify
 
-from . import twitter_scraper
-
-from twitter_scraper import get_tweets
+from .twitter_scraper2 import get_tweets
 
 
 def main(user):
@@ -12,7 +10,7 @@ def main(user):
         user = user.lstrip('@')
     
     # max number of twitter pages to scrape
-    numPages = 25
+    numPages = 15
     
     # Error handling for invalid usernames
     try:
@@ -22,7 +20,7 @@ def main(user):
         # Creating a sentence
         text_model = markovify.Text(tweets)
 
-        newTweet = text_model.make_short_sentence(280)
+        newTweet = text_model.make_short_sentence(240)
 
         # Ensuring valid urls by making sure putting spaces before twitter images
         newTweet = separate_pic_url(newTweet)
@@ -35,7 +33,7 @@ def main(user):
  
 # Separate the url of a twitter picture from other words
 def separate_pic_url(tweet):
-    if tweet == None:
+    if tweet is None:
         return tweet
         
     tweetArr = tweet.split(' ')

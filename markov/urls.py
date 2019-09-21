@@ -9,7 +9,4 @@ from .views import results_redirect
 urlpatterns = [
 	path('', views.index, name='index'),
     
-    path('loading/', views.loading_redirect),
-    
-    path('results/', views.results_redirect), 
 ]

@@ -7,6 +7,9 @@ from lxml.etree import ParserError
 session = HTMLSession()
 
 
+""" All code not wrapped by #new comments is written by KennethReitz @Github.com """
+
+
 def get_tweets(user, pages=25):
     """Gets tweets for a given user, via the Twitter frontend API."""
 
@@ -25,19 +28,28 @@ def get_tweets(user, pages=25):
 
         while pages > 0:
             try:
+                # new: Break loop when encountering empty html
+                items_html = r.json()['items_html'].strip()
+
+                if not items_html:
+                    break
+                # /new
                 html = HTML(html=r.json()['items_html'],
                             url='bunk', default_encoding='utf-8')
+
             except KeyError:
                 raise ValueError(
                     f'Oops! Either "{user}" does not exist or is private.')
-			#new
+
+
+            #new: Error catching for special cases
             except ParserError:
                 pages += -1
                 continue
                 
             except ValueError:
                 continue
-			#/new
+            #/new
 
             comma = ","
             dot = "."
@@ -98,14 +110,14 @@ def get_tweets(user, pages=25):
                     styles = node.attrs['style'].split()
                     for style in styles:
                         if style.startswith('background'):
-                            #new try except block to catch errors from deleted videos
+                            #new: Try-Except to catch errors from videos that have been blocked
                             try:
                                 tmp = style.split('/')[-1]
                                 video_id = tmp[:tmp.index('.jpg')]
                                 videos.append({'id': video_id})
                             except ValueError:
                                 continue
-                            #new
+                            #/new
                 tweets.append({
                     'tweetId': tweet_id,
                     'isRetweet': is_retweet,
