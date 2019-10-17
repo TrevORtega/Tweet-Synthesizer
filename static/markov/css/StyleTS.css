@@ -206,11 +206,13 @@ button a{
 }
 
 footer{
-    margin-top: 5em;
     text-align: center;
     font-size: small;
-    position: relative;
+    position: absolute;
     color: black;
+    bottom: 0;
+    left: 50%;
+    margin-left: -180px;
 }
 
 @media only screen and (max-width: 600px){
